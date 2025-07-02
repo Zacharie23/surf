@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8"/>
-  <title>Plan d'accès - SURFTEAM</title>
-</head>
-<body>
-  <header>
-    <h1>Bienvenue chez SURFTEAM</h1>
-    <nav>
-      <a href="index.html">Accueil</a> | 
-      <a href="plan.html">Plan d'accès</a> | 
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <title>Plan d'accès - SURFTEAM</title>
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenue chez SURFTEAM</h1>
+      <nav>
+        <a href="index.html">Accueil</a> |
+        <a href="plan.html">Plan d'accès</a> |
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-  <section id="plan-acces">
-    <h2>Plan d'accès</h2>
-    <p>Nous sommes situés sur la côte atlantique, voici comment nous trouver :</p>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=..." 
-      width="600" 
-      height="450" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy">
-    </iframe>
-  </section>
+    <section id="plan-acces">
+      <h2>Plan d'accès</h2>
+      <p>
+        Nous sommes situés sur la côte atlantique, voici comment nous trouver :
+      </p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=..."
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      >
+      </iframe>
+    </section>
 
-  <footer>
-    <h2>Mentions légales</h2>
-    <p>Ce site est édité par SURFTEAM, une entreprise enregistrée sous le numéro XXXXXXX.</p>
-    <h2>Copyright</h2>
-    <p>&copy; 2025 SURFTEAM. Tous droits réservés.</p>
-  </footer>
-</body>
+    <footer>
+      <p>
+        <a href="mentions-legales.html">Mentions légales</a> |
+        <a href="confidentialite.html">Politique de confidentialité</a>
+      </p>
+    </footer>
+    <div
+      id="cookie-banner"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-top: 1px solid #ccc;
+        text-align: center;
+        display: none;
+        z-index: 1000;
+      "
+    >
+      <p>
+        Nous utilisons des cookies pour améliorer votre expérience utilisateur.
+      </p>
+      <button id="accept-cookies">Accepter</button>
+      <button id="refuse-cookies">Refuser</button>
+    </div>
+    <script src="cookies.js"></script>
+  </body>
 </html>

@@ -1,53 +1,254 @@
+/* Import des polices Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f4f1de;
+  /* sable clair */
+  color: #00446C;
+  /* texte principal */
+  margin: 0;
+  padding: 0 20px;
+}
+
 header {
-      position: relative;
-      border-bottom: 0.5px solid #333;
-      padding: 20px;
-    }
-    img {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 0;
-      width: 250px; 
-      height: auto;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 0;
-    }
-    nav ul {
-      list-style-type: none;
-      display: flex;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
-    nav ul li {
-      flex: 1;
-      text-align: center;
-    }
-    nav ul li a {
-      display: block;
-      text-decoration: none;
-      background-color: #0077b6;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      margin: 5px;
-    }
-    #produits ul {
-      list-style-type: square;
-    }
-    #produits h4 {
-      font-style: italic;
-      color: #0077b6;
-      padding-left: 5px;
-    }
-    footer {
-      border-top: 1px solid #333;
-      padding-left: 20px;
-      padding-right: 20px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
+  position: relative;
+  border-bottom: 0.5px solid #333;
+  padding: 20px 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #00446C;
+}
+
+header h1,
+header h2 {
+  color: #00446C;
+  margin: 0 0 10px 0;
+}
+
+header p {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  margin: 0;
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  background-color: #0077b6;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+nav ul li {
+  flex: none;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  background-color: #0077b6;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #ff6b6b;
+  outline: none;
+}
+
+#produits {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  color: #00446C;
+}
+
+#produits ul {
+  list-style-type: square;
+  padding-left: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#produits h3,
+#produits h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #00446C;
+  margin-bottom: 10px;
+}
+
+#produits h4 {
+  font-style: italic;
+  padding-left: 5px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #ff6b6b;
+  outline: none;
+}
+
+footer {
+  border-top: 1px solid #333;
+  padding: 20px;
+  margin-top: 40px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #00446C;
+  text-align: center;
+  background-color: #f4f1de;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  #produits {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  img {
+    position: static;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+/* Zoom sur les images au survol */
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Animation d’apparition douce pour les services */
+#services {
+  transition: all 0.6s ease-in-out;
+  opacity: 0.8;
+}
+
+/* Loader animé (spinner) */
+#loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #0077b6;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 40px auto;
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#temoignages {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #e0f7fa;
+  border-radius: 15px;
+  max-width: 1000px;
+}
+
+#temoignages h3 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+  color: #00446C;
+}
+
+#temoignages-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.carte-temoignage {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carte-temoignage:hover {
+  transform: translateY(-5px);
+}
+
+.avis-commentaire {
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.avis-nom {
+  font-weight: bold;
+  color: #00446C;
+}
+
+.avis-date {
+  font-weight: normal;
+  color: #555;
+}
+
+.avis-note {
+  color: #fbc02d;
+  font-size: 1.2em;
+}
